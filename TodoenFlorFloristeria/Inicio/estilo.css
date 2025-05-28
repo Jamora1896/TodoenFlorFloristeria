@@ -1,0 +1,438 @@
+/* Barra de Navegacion*/
+
+.container-fluid {
+    background-color: #fdfcfd; /* Establece un color de fondo muy claro para el contenedor */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave debajo para dar profundidad */
+}
+.logo {
+    width: 80px;  /* Define el ancho fijo del logo para que sea de 80px */
+    height: 80px;  /* Define la altura fija del logo para que sea de 80px */
+    border-radius: 10%;/* Redondea ligeramente las esquinas del logo, dándole un borde suave */
+}
+.navbar-nav {
+    display: flex; /* Usa flexbox para disponer los elementos dentro del nav horizontalmente */
+    justify-content: center; /* Centra los ítems (links) horizontalmente dentro del navbar */
+    width: 100%;   /* Ocupa todo el ancho disponible del contenedor padre */
+}
+.nav-link {
+    color: #916e7c; /* Color base del texto de los links de navegación */
+    font-weight: 500; /* Peso de fuente medio para un texto seminegrita */
+    font-size: 17px; /* Tamaño de la fuente */
+    text-decoration: none; /* Quita el subrayado predeterminado */
+    border-bottom: 2px solid transparent; /* Línea inferior invisible para animaciones o cambios al pasar el cursor */
+}
+
+.nav-link:hover {
+    border-bottom-color: rgb(250, 231, 246); /* Cambia el color de la línea inferior al pasar el mouse */
+    color: #e590b3; /* Cambia el color del texto al pasar el mouse */
+}
+
+.dropdown-item {
+    color: #916e7c; /* Color base del texto en los elementos del dropdown */
+    font-weight: 500;  /* Peso medio para el texto */
+    font-size: 17px; /* Tamaño de fuente */
+    text-decoration: none;  /* Sin subrayado */
+    border-bottom: 2px solid transparent; /* Línea inferior invisible para efectos */
+}
+
+.dropdown-item:hover {
+    border-bottom-color: rgb(250, 231, 246); /* Color línea inferior al hacer hover */
+    color: #e590b3; /* Color del texto al hacer hover */
+}
+
+.navbar .nav-link.active {
+    color: #916e7c; /* Color del link activo en el navbar */
+    font-weight: 500; /* Peso medio */
+    font-size: 17px; /* Tamaño fuente */
+    text-decoration: none;  /* Sin subrayado */
+    border-bottom: 2px solid transparent; /* Línea inferior invisible */
+}
+
+.navbar .nav-link.active:hover {
+    border-bottom-color: rgb(250, 231, 246);  /* Cambio color línea inferior al hacer hover */
+    color: #e590b3; /* Cambio color texto al hacer hover sobre el link activo */
+}
+
+.form-control {
+    border: none;  /* Elimina bordes predeterminados */
+    background-color: transparent; /* Fondo transparente */
+    border: 1px solid #e590b3; /* Añade un borde personalizado */
+    display: flex; /* Usamos flex para centrar contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    cursor: pointer; /* Cambia cursor al pasar sobre el input */
+    outline: none; /* Elimina el contorno azul al enfocar */
+
+    &:hover {
+        background-color: rgb(250, 231, 246); /* Cambia fondo al pasar el mouse */
+    }
+
+}
+/* Cuando el input o botón están enfocados */
+.form-control:focus,
+.btn-outline-success:focus {
+    outline: none; /* Elimina contorno por defecto */
+    box-shadow: none;  /* Elimina sombra predeterminada */
+    border-color: #e590b3; /* Cambia color del borde cuando está activo */
+  
+    /*este código elimina el borde y sombra azul típica de foco que tiene el navegador o Bootstrap,
+     y en su lugar cambia el borde por un color personalizado (#e590b3) cuando el input o botón está activo. */
+}
+
+/* Quitar el botón "x" que aparece en inputs de tipo search en navegadores webkit */
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;  /* elimina el botón o la x ya que no se puede personalizar */
+    appearance: none;  /* Elimina estilo por defecto */
+    display: none; /* Oculta el botón */
+}
+
+/* Cambiar color del texto del placeholder */
+.form-control::placeholder {
+  color:#916e7c;  /* Color del texto de ayuda en el input */
+}
+/*para poner una imagen de fondo*/
+.tienda{
+    display: flex;
+    align-items: center;
+    min-height: 95vh;
+    background: url(/Images/fondo.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #232024;
+}
+.heading{
+    font-size: 48px;/*tamaño de la letra*/
+    font-weight: bold;/*grosor de la fuente en negrita*/
+    margin-top: 100px;/*margen superior del elemento*/
+    margin-bottom: 30px;/*margen inferior*/
+    color: #060606;/*color de texto*/
+}
+/*boton de comprar flores*/
+.comprar{
+    display: inline-block;
+    margin-top: 40px; /*estos baja el botan*/
+    border-radius: 40px;
+    background-color: #fdfcfd;
+    color: #916e7c;
+    padding: 30px;
+    cursor: pointer;
+ 
+}
+
+/*esteblese color de fondo del boton*/
+.comprar:hover{
+    background:#e590b3;
+}
+
+.informacion{
+    text-align: center;
+    font-size: 4rem;
+    color: #0d0d0d;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: #fdfcfd;
+
+}
+span{
+    color: #916e7c;
+    font-size: medium;
+    text-decoration: underline;
+}
+
+.about .fila{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+.about .fila .imagen{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+.about .fila .imagen img{
+    width: 100%;
+    border: 0rem solid#d699bc;
+    border-radius: 5rem;
+    box-shadow: 0 .5rem 1rem #030303
+
+}
+.contenido{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+.imagen{
+    margin-right: 2opx;
+}
+img{
+    max-width: 300px;
+    height: auto;
+}
+/*comprar los mas vendidos*/
+.btn{
+    display: inline-block;
+    margin-top: 50px; /*estos baja el botan*/
+    border-radius: 5rem;
+     background-color: #fdfcfd;
+    color: #916e7c;
+    padding:.9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+/* Estilo del título (opcional) */
+
+
+h1 {
+    font-size: 2.5rem; /* Tamaño grande para encabezados principales */
+    color: #916e7c;; /* Color atractivo para el encabezado */
+    margin-bottom: 10px; /* Espacio debajo del encabezado */
+    text-align: center;
+}
+
+
+/* Estilo de la tabla */
+table {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color:#fdfcfd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de las imágenes en el encabezado */
+thead img {
+  width: 100%;
+  max-width: 325px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Efecto zoom al pasar el mouse */
+thead img:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo de celdas */
+th, td {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #dbc4c4;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Fila con efecto hover */
+tbody tr:hover {
+  background-color: #e7dfdf;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  thead img {
+    max-width: 100%;
+  }
+
+  table, th, td {
+    font-size: 19px;
+  }
+}
+
+/*iniciar sesion*/
+/* Estilo general del formulario */
+.formulario {
+  background-color: #fdfcfd;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Estilo para etiquetas */
+.formulario label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  color: #916e7c;
+  font-weight: bold;
+}
+
+/* Inputs, selects y textarea */
+.formulario input,
+.formulario select,
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Botón */
+.formulario button {
+  margin-top: 1.5rem;
+  background-color:  rgb(250, 231, 246);
+  color: #916e7c;
+  padding: 17px 30px;
+  border: none;
+  border-radius: 7px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+  background-color: #e590b3;
+}
+
+/* Responsivo */
+@media (max-width: 300px) {
+  .formulario {
+    padding: 1rem;
+  }
+}
+/* Contenedor en columnas */
+.contenedor-contacto {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap; /* Para que se acomode en pantallas pequeñas */
+}
+
+/*INICIAR SESION*/
+/* Formulario */
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fdfcfd;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.formulario-contacto label {
+  font-weight: bold;
+  color:#916e7c;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 10px;
+  font-size: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fffefe;
+}
+
+
+
+.formulario-contacto button {
+  background-color: rgb(250, 231, 246);
+  color: #916e7c;
+  padding: 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contacto button:hover {
+    background:#e590b3;
+}
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  #contacto {
+    padding: 30px 10px;
+  }
+
+  .formulario-contacto button {
+    font-size: 14px;
+  }
+}
+/* Estilo general del body */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color:#fdfcfd;
+}
+
+/* Sección principal de contacto */
+#contacto {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Título */
+#contacto h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #916e7c;
+}
+
+/* Contenedor general */
+.contenedor-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Información de contacto */
+.info-contacto p {
+  font-size: 16px;
+  color: #080808;
+  margin: 6px 0;
+}
+
+/* Redes sociales */
+.redes-sociales p {
+  font-size: 16px;
+  color: #0e0e0e;
+  margin-bottom: 5px;
+}
+
+.redes-sociales a {
+  color: #080808;
+  text-decoration: none;
+  margin-right: 12px;
+  font-weight: bold;
+}
+
+.redes-sociales a:hover {
+  text-decoration: underline;
+}
+
+/* Mapa */
+.mapa iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  border: none;
+}
