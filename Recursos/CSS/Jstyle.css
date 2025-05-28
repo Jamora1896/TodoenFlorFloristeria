@@ -1,0 +1,323 @@
+ 
+/* Barra de Navegacion*/
+
+.container-fluid {
+    background-color: #fdfcfd; /* Establece un color de fondo muy claro para el contenedor */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave debajo para dar profundidad */
+}
+.logo {
+    width: 80px;  /* Define el ancho fijo del logo para que sea de 80px */
+    height: 80px;  /* Define la altura fija del logo para que sea de 80px */
+    border-radius: 10%;/* Redondea ligeramente las esquinas del logo, dándole un borde suave */
+}
+.navbar-nav {
+    display: flex; /* Usa flexbox para disponer los elementos dentro del nav horizontalmente */
+    justify-content: center; /* Centra los ítems (links) horizontalmente dentro del navbar */
+    width: 100%;   /* Ocupa todo el ancho disponible del contenedor padre */
+}
+.nav-link {
+    color: #916e7c; /* Color base del texto de los links de navegación */
+    font-weight: 500; /* Peso de fuente medio para un texto seminegrita */
+    font-size: 17px; /* Tamaño de la fuente */
+    text-decoration: none; /* Quita el subrayado predeterminado */
+    border-bottom: 2px solid transparent; /* Línea inferior invisible para animaciones o cambios al pasar el cursor */
+}
+
+.nav-link:hover {
+    border-bottom-color: rgb(250, 231, 246); /* Cambia el color de la línea inferior al pasar el mouse */
+    color: #e590b3; /* Cambia el color del texto al pasar el mouse */
+}
+
+.dropdown-item {
+    color: #916e7c; /* Color base del texto en los elementos del dropdown */
+    font-weight: 500;  /* Peso medio para el texto */
+    font-size: 17px; /* Tamaño de fuente */
+    text-decoration: none;  /* Sin subrayado */
+    border-bottom: 2px solid transparent; /* Línea inferior invisible para efectos */
+}
+
+.dropdown-item:hover {
+    border-bottom-color: rgb(250, 231, 246); /* Color línea inferior al hacer hover */
+    color: #e590b3; /* Color del texto al hacer hover */
+}
+
+/* Estilos para cuando el botón de menú desplegable (dropdown) está enfocado, activo o abierto */
+.navbar .dropdown-toggle:focus, /* Cuando el dropdown recibe foco (por teclado o clic) */
+.navbar .dropdown-toggle:active, /* Cuando se hace clic sobre el dropdown */
+.navbar .dropdown-toggle.show { /* Cuando el menú desplegable está visible (abierto) */
+  color: #e590b3 !important;            /* Cambia el color del texto del botón a rosado personalizado */
+  /* El !important asegura que este color sobrescriba los estilos por defecto de Bootstrap */
+}
+/* Cambia el color de fondo y texto del ítem del dropdown cuando está activo (clic) */
+.dropdown-menu .dropdown-item:active {
+  background-color: #fdeaf3 !important; /* Fondo rosado claro */
+  color: #e590b3 !important;            /* Color de texto rosado */
+}
+
+
+.navbar .nav-link.active {
+    color: #916e7c; /* Color del link activo en el navbar */
+    font-weight: 500; /* Peso medio */
+    font-size: 17px; /* Tamaño fuente */
+    text-decoration: none;  /* Sin subrayado */
+    border-bottom: 2px solid transparent; /* Línea inferior invisible */
+}
+
+.navbar .nav-link.active:hover {
+    border-bottom-color: rgb(250, 231, 246);  /* Cambio color línea inferior al hacer hover */
+    color: #e590b3; /* Cambio color texto al hacer hover sobre el link activo */
+}
+
+.form-control {
+    border: none;  /* Elimina bordes predeterminados */
+    background-color: transparent; /* Fondo transparente */
+    border: 1px solid #e590b3; /* Añade un borde personalizado */
+    display: flex; /* Usamos flex para centrar contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    cursor: pointer; /* Cambia cursor al pasar sobre el input */
+    outline: none; /* Elimina el contorno azul al enfocar */
+
+    &:hover {
+        background-color: rgb(250, 231, 246); /* Cambia fondo al pasar el mouse */
+    }
+
+}
+/* Cuando el input o botón están enfocados */
+.form-control:focus,
+.btn-outline-success:focus {
+    outline: none; /* Elimina contorno por defecto */
+    box-shadow: none;  /* Elimina sombra predeterminada */
+    border-color: #e590b3; /* Cambia color del borde cuando está activo */
+  
+    /*este código elimina el borde y sombra azul típica de foco que tiene el navegador o Bootstrap,
+     y en su lugar cambia el borde por un color personalizado (#e590b3) cuando el input o botón está activo. */
+}
+
+
+/* Estado activo (cuando haces clic) */
+.btn-outline-success:active,
+.btn-outline-success.active,
+.show > .btn-outline-success.dropdown-toggle {
+  background-color:rgb(250, 231, 246)!important; /* rosa más oscuro */
+   border-color:#e590b3 !important;
+
+}
+
+
+/* Quitar el botón "x" que aparece en inputs de tipo search en navegadores webkit */
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;  /* elimina el botón o la x ya que no se puede personalizar */
+    appearance: none;  /* Elimina estilo por defecto */
+    display: none; /* Oculta el botón */
+}
+
+/* Cambiar color del texto del placeholder */
+.form-control::placeholder {
+  color:#916e7c;  /* Color del texto de ayuda en el input */
+}
+
+
+/* Catalogo*/
+.container-cards-products .row > .col {
+  display: flex;           /* Hace que la columna sea un contenedor flex */
+  justify-content: center; /* Centra horizontalmente la card dentro de la columna */
+}
+
+.container-cards-products .card {
+  max-width: 420px;        /* Tamaño máximo de la card */
+  width: 100%;             /* Para que la card ocupe todo el ancho posible dentro del max-width */
+}
+.card-body{
+    color: #916e7c;
+    justify-items: center;
+}
+.card-title{
+    font-weight: bolder;
+}
+.price{
+    font-weight: bolder;
+}
+
+.catalogo-categories{
+    display: flex;
+    justify-content:center;
+    gap: 20px; /* separación entre enlaces */
+    margin: 20px 0;
+}
+.catalogo-categories a.categories {
+    color:#916e7c; 
+    font-weight: bold;
+}
+
+.catalogo-categories a.categories:hover {
+    color:#e590b3/* color al pasar el mouse */
+}
+
+.btn {
+    border: none;
+    background-color: rgb(250, 231, 246);
+    border: 1px solid #e590b3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #916e7c;
+    font-weight: bolder;
+
+    &:hover {
+        background-color: #fdfcfd;
+        color: #916e7c;
+        border: 1px solid #e590b3;
+
+    }
+}
+/* Estado activo (cuando haces clic) */
+.btn-primary:active,
+.btn-primary.active {
+  background-color:rgb(250, 231, 246)!important; /* rosa más oscuro */
+   border-color:#e590b3 !important;
+   color:#916e7c !important;
+}
+
+    /* Carrito de Compras*/
+
+#carrito-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 2px solid #e590b3;
+  background-color: #fdfcfd;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  color: #916e7c;
+  text-align: center;
+}
+
+#lista-carritos li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+/* Nuestra Historia*/
+body {
+    background-color: rgb(250, 231, 246);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contenido h1 {
+    display: flex;
+    /*Esto convierte un contenedor en un "flexbox", es decir, un contenedor flexible que te permite alinear y distribuir sus elementos hijos de manera eficiente.*/
+    justify-content: center;
+    /* Se usa con flexbox para alinear los elementos horizontalmente en el centro del contenedor.*/
+    align-items: center;
+    /*También se usa con flexbox y alinea los elementos verticalmente en el centro del contenedor*/
+    color: #916e7c;
+}
+
+.contenido p {
+    text-align: left;
+    /* Centra el texto hacia la izquierda */
+    font-size: 0.9rem;
+    /* Tamaño del texto más pequeño (ajustable) */
+    max-width: 700px;
+    /* Limita el ancho para mejor lectura */
+    margin: 10px auto;
+    /* Centrado horizontal + separación entre párrafos */
+    line-height: 1.6;
+    /* Mejora la legibilidad */
+    color: #916e7c;
+}
+
+.bloque2clearfix {
+    text-align: left;
+    /* Centra el texto hacia la izquierda */
+    font-size: 0.9rem;
+    /* Tamaño del texto más pequeño (ajustable) */
+    max-width: 700px;
+    /* Limita el ancho para mejor lectura */
+    margin: 20px auto;
+    /* Centrado horizontal + separación entre párrafos */
+    line-height: 1.6;
+    /* Mejora la legibilidad */
+    margin-bottom: 50px;
+    /* Espacio entre bloques */
+}
+
+.bloque1 {
+    text-align: center;
+    /* se usa para centrar horizontalmente el texto (y elementos en línea) dentro de un contenedor */
+    margin-bottom: 50px;
+    /* Espacio entre bloques */
+}
+
+.bloque3 {
+    text-align: center;
+    /* se usa para centrar horizontalmente el texto (y elementos en línea) dentro de un contenedor */
+    margin-bottom: 50px;
+    /* Espacio entre bloques */
+}
+
+.bloque4 {
+    text-align: center;
+    margin-bottom: 50px;
+    /* se usa para centrar horizontalmente el texto (y elementos en línea) dentro de un contenedor */
+    color: #916e7c;
+}
+/* footer*/
+
+/* ANUNCIO */
+ 
+.announcement-bar {
+    background-color: #fdfcfd;
+    padding: 30px;
+}
+
+.announcement-bar-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Para que se adapte en pantallas pequeñas */
+}
+
+.content-info {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.content-info p {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.content-info i {
+    color: #e590b3;
+}
+.content-info p {
+    color: #916e7c; /* Color base del texto de los links de navegación */
+    font-weight: 500; /* Peso de fuente medio para un texto seminegrita */
+    font-size: 17px; /* Tamaño de la fuente */
+    text-decoration: none; /* Quita el subrayado predeterminado */
+    border-bottom: 2px solid transparent; /* Línea inferior invisible para animaciones o cambios al pasar el cursor */
+    
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: #e590b3;
+    text-decoration: none;
+}
+
+.social-links a i {
+    font-size: 20px;
+}
